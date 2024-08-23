@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import { useForm } from "react-hook-form";
 
 function Contact() {
@@ -12,22 +12,10 @@ function Contact() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="mt-28  justify-center text-center">
-      {/* <div className=" w-[500px] "> */}
-      {/* <div className="modal-box"> */}
-        {/* 
-
-     <dialog id="my_modal_3" className="modal">
-        <div className="modal-box">
-          //<form onSubmit={handleSubmit(onSubmit)} method="dialog"> */}
+    <>
+      <Navbar />
+      <div className="mt-28  justify-center text-center">
         <form onSubmit={handleSubmit(onSubmit)} method="dialog">
-          <Link
-            to="/"
-            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-          >
-            ✕
-          </Link>
-
           <h3 className="font-bold text-lg">Contact Us</h3>
 
           {/* Name */}
@@ -68,7 +56,7 @@ function Contact() {
           <div className="mt-4 space-y-2">
             <label>Message</label>
             <br />
-            <input 
+            <input
               type="text"
               placeholder=" Type your message"
               className="w-80 px-3 py-3 border rounded-md outline-none"
@@ -88,13 +76,11 @@ function Contact() {
             </button>
           </div>
         </form>
-      {/* </div> */}
+        {/* </div> */}
 
-      {/* </div> */}
-    </div>
-
-    // </dialog>
-    // </div>
+        {/* </div> */}
+      </div>
+    </>
   );
 }
 
